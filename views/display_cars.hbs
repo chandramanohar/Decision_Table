@@ -1,0 +1,229 @@
+<html>
+<head>
+  <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <style>
+    car{
+  background-color: black;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+    }
+    dropdown-toggle
+    {
+      text-align: right;
+    }
+      h1
+	   {
+	  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color:white;
+    display: block;
+   
+     }
+    
+     h2{
+         text-align:center;
+     }
+     input[type=submit]
+     {
+       text-align: center;
+       font-size: 14px;
+     }
+     @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+html, body {
+  font-family: 'Lato', serif;  
+}
+
+.navbar-default {
+  font-size: 1.15em;
+  font-weight: 400;
+  background-color: #006b96;
+  padding: 10px;
+  border: 0px;
+  border-radius: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #cbf0ff;
+}
+
+.navbar-default .navbar-brand {
+  color: #002433;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #ffffff;
+  text-shadow: 1px -1px 8px #b3e9ff;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background-color: #004059;
+  color: white;
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #002433;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+.dropdown-menu {
+  background-color: #004059;
+  color: white;
+  border: 0px;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dropdown-menu>li>a {
+  background-color: #004059;
+  color: white;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+  background-color: #004059;
+  color:white;
+}
+
+.dropdown-menu .divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #003246;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #ffffff;
+}
+
+@media (max-width: 767px) { 
+  .dropdown-menu>li>a {
+    background-color: #006b96;
+    color: #ffffff;
+  }
+  .dropdown-menu>li>a:hover {
+    color: #ffffff;
+  }
+  
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  
+  .dropdown-menu .divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #005577;
+  }
+} /* END Media Query */
+
+         </style>
+  </head>
+<body bgcolor="blueviolet">
+  <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <h1>List of cars Available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+          <div class="navbar-header">
+            <!-- <a class="navbar-brand" href="#">CORE</a> -->
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+               <!-- <li><a href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Dashboard</a></li> -->
+           
+            <ul class="nav navbar-nav navbar-left">
+              <li class="dropdown">
+                <l1></l1><a href="/Logout" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Logout<span></span></a><l1>
+                <ul class="dropdown-menu">
+                  
+               </ul>
+               </li>
+               </ul>
+               </ul>
+               </div>
+               </div>
+               </nav>
+  <h2>
+<form action="/submit/choose" method="post">
+    <td >  &nbsp;&nbsp;</td>
+
+{{#each all_cars as |val key|}}
+<!-- News jumbotron -->
+
+<div class="jumbotron text-center hoverable p-4">
+
+  <!-- Grid row -->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-md-4 offset-md-1 mx-3 my-3">
+
+      <!-- Featured image -->
+      <div class="view overlay">
+       <!-- <img src={{val.car_img}} class="img-fluid" alt="Sample image for first version of blog listing"/>-->
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-7 text-md-left ml-3 mt-3">
+ 
+      <p>Car Model:{{val.car_model}}</p>
+      <p>Price: {{val.car_price}} $</p>
+     <!-- <p>$500</p>-->
+      <span>Reg No:{{val.reg_no}}</span>&nbsp;&nbsp;<br><span>Id : {{val.owner_id}}</span><br>
+      <!-- Excerpt -->
+      <a href="#!" class="green-text">
+        <br><input type="submit" value="submit"><br>
+      </a>
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+</div>
+<!-- News jumbotron -->
+{{!-- <div class="car">
+  <img src="/views/car1.jpg" alt="car" height="42" width="42">
+      <br><input type="submit" value={{val.car_model}}><br>  
+</div> --}}
+ {{/each}}
+</form>
+</h2>
+</body>
+</body>
+</html>

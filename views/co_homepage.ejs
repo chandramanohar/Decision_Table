@@ -1,0 +1,23 @@
+<html>
+<head></head>
+<body>
+       <%- include("nav.ejs") %>
+       
+
+       <% temp.forEach(function(i){ %>
+              <div>
+                     <form action='/select' method='post'>
+                            <p> <%= i.user_id +"  "+i.car_model+"  "+i.pickup_date+"  "+i.drop_date+"   "+i.pickup_time+"  "+i.drop_time %></p>
+                            <input type="hidden" name='userid'  value=<%= i.user_id %> >
+                            <input type="hidden" name='car_model' value=<%= i.car_model %>>
+                            <input type="hidden" name='st_date'  value=<%= i.pickup_date %> >
+                            <input type="hidden" name='st_time' value=<%= i.pickup_time %>>
+                            <input type="hidden" name='en_date'  value=<%= i.drop_date %> >
+                            <input type="hidden" name='en_time' value=<%= i.drop_time %>>
+                            Enter Regno:<input type="text" name="regno"><br>
+                            <input type='submit' value='submit'>
+                     </form>
+              </div>
+      <% }); %>
+</body>
+</html>

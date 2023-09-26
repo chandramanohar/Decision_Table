@@ -1,0 +1,18 @@
+<html>
+<head></head>
+<body>
+       <%- include("Admin_navbar.ejs")  %>
+       
+
+       <% temp.forEach(function(i){ %>
+              <div>
+                     <form action='/Licence_status' method='post'>
+                            <p> <%= i.user_id +"  "+i.email %></p>
+                            <input type="hidden" name="user_id" value=<%= i.user_id %>>
+                            <input type='submit' value='yes' name="submit">
+                            <input type='submit' value='no' name="submit">
+                     </form>
+              </div>
+      <% }); %>
+</body>
+</html>

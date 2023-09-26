@@ -1,0 +1,244 @@
+<html>
+  <html>
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+/*-----Background-----*/
+
+body{
+	 background-image:url(https://s3.envato.com/files/243754334/primag.jpg);
+	 background-repeat:no-repeat;
+	 background-size:cover;
+	 width:100%;
+	 height:100vh;
+	 overflow:auto;
+	 
+}
+
+/*-----for border----*/
+.container{
+	font-family:Roboto,sans-serif;
+	  background-image:url(https://image.freepik.com/free-vector/dark-blue-blurred-background_1034-589.jpg) ;
+    
+     border-style: 1px solid grey;
+     margin: 0 auto;
+     text-align: center;
+     opacity: 0.8;
+     margin-top: 37px;
+   box-shadow: 2px 5px 5px 0px #eee;
+     max-width: 600px;
+     padding-top: 10px;
+     height: 610px;
+    
+}
+/*--- for label of first and last name---*/
+.MobileNo{
+	 margin-left: 1px;
+     font-family: sans-serif;
+     font-size: 14px;
+     color: white;
+     margin-top: 10px;
+}
+.Aadhar{
+	 margin-left: 1px;
+     font-family: sans-serif;
+     font-size: 14px;
+     color: white;
+     margin-top: 10px;
+}
+.name{
+	 margin-left: 50px;
+     font-family: sans-serif;
+     font-size: 14px;
+     color: white;
+     margin-top: 5px;
+}
+#name{
+	 margin-top:5px;
+}
+.Location
+{
+  margin-left: 1px;
+     font-family: sans-serif;
+     font-size: 14px;
+     color: white;
+     margin-top: 10px;
+}
+
+/*---for heading-----*/
+.heading{
+	 text-decoration:bold;
+	 text-align : center;
+	 font-size:30px;
+	 color:#F96;
+	 padding-top:10px;
+}
+/*-------for email----------*/
+  /*------label----*/
+#email{
+    margin-top: 5px;
+}
+/*-----------for Password--------*/
+     /*-------label-----*/
+.mail{
+	 margin-left: 44px;
+     font-family: sans-serif;
+     color: white;
+     font-size: 14px;
+     margin-top: 13px;
+}
+.pass{
+	 color: white;
+     margin-top: 9px;
+     font-size: 14px;
+     font-family: sans-serif;
+     margin-left: 6px;
+     margin-top: 9px;
+}
+#password{
+ margin-top: 6px;
+}
+</style>
+	</head>
+    <body >
+        <form action="/register" name="myForm" onsubmit="return validateForm()"method="post">
+          <div class="container">
+              <!---heading---->
+                  <header class="heading"> Registration-Form</header><hr></hr>
+               <!---Form starting----> 
+               <div class="row ">
+                <!--- For Name---->
+                      <div class="col-sm-12">
+                          <div class="row">
+                        <div class="col-xs-4">
+                                  <label class="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> </div>
+                          <div class="col-xs-8">
+                             <input type="text" name="name" id="name" placeholder="Enter your Name" class="form-control "><br>
+                          </div>
+                       </div>
+                  </div>
+                  
+                  <!-----For email---->
+                  <div class="col-sm-12">
+                      <div class="row">
+                        <div class="col-xs-4">
+                              <label class="mail" >Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label></div>
+                        <div class="col-xs-8"	>	 
+                             <input type="text" name="email"  id="email" placeholder="Enter your email" class="form-control" ><br>
+                          </div>
+                      </div>
+                  </div>
+                <!-----For Password and confirm password---->
+                      
+                   <div class="col-sm-12">
+                      <div class="row">
+                      <div class="col-xs-4">
+                              <label class="MobileNo">MobileNo   </label></div>
+                   <div class="col-xs-8">
+                            <input type="text" name="mobileno" id="mobileno" placeholder="Enter your MobileNo" class="form-control"><br>
+                  </div>
+                   </div>
+               </div><br>
+               <div class="col-sm-12">
+                <div class="row">
+                <div class="col-xs-4">
+                        <label class="Aadhar">Govt ID</label></div>
+             <div class="col-xs-8">
+                      <input type="text" name="Aadhar" id="Aadhar" placeholder="Enter your Govt ID" class="form-control"><br>
+            </div>
+             </div>
+         </div><br>
+         <div class="col-sm-12">
+          <div class="row">
+          <div class="col-xs-4">
+                  <label class="Aadhar">Licence Number   </label></div>
+       <div class="col-xs-8">
+                <input type="text" name="licence_no" id="licence_no" placeholder="Enter your LicenceNo" class="form-control"><br>
+      </div>
+       </div>
+   </div><br>
+    <div class="col-sm-12">
+          <div class="row">
+          <div class="col-xs-4">
+                  <label class="Aadhar">Date of Birth</label></div>
+       <div class="col-xs-8">
+                <input type="text" name="dateofbirth" id="dateofbirth" placeholder="Enter your date of birth (ex:1jan1997)" class="form-control"><br>
+      </div>
+       </div>
+   </div><br>
+         <div class="col-sm-12">
+          <div class="row">
+          <div class="col-xs-4">
+                  <label class="pass">Password  </label></div>
+       <div class="col-xs-8">
+                <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control"><br>
+      </div>
+       </div>
+       <div class="col-sm-12">
+        <div class="row">
+        <div class="col-xs-4">
+                <label class="Location">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Confirm Password </label></div>
+     <div class="col-xs-8">
+              <input type="Location" name="location" id="location" placeholder="Confirm your Password" class="form-control"><br>
+    </div>
+     </div>
+ </div><br>
+            <div class="col-sm-12">
+                <input type="submit" value="SignUp">
+          </div>
+        </div>
+      </div>	         
+        
+   </div><br>
+        </form>
+        <script>
+          function validateForm() {
+          let a = document.forms["myForm"]["name"].value;
+          let b = document.forms["myForm"]["email"].value;
+          let c = document.forms["myForm"]["mobileno"].value;
+          let e = document.forms["myForm"]["Aadhar"].value;
+          let g = document.forms["myForm"]["Licence"].value;
+          let h = document.forms["myForm"]["bob"].value;
+          let d = document.forms["myForm"]["password"].value;
+          let f=document.forms["myForm"]["Confirm Password"].value;
+     
+          if (a == "") {
+              alert("Name must be filled ");
+              return false;
+          }
+          if (b == "") {
+              alert("Email must be filled ");
+              return false;
+          }
+          if(c.length!=10 && c == "") {
+              alert("Invalid Phonenumber");
+              return false;
+          }
+          if (e == "") {
+              alert("Govt ID must be filled ");
+              return false;
+          }
+          if (g== "") {
+               alert("Licence must be filled ");
+                    return false;
+                }
+          if (h == "") {
+              alert("Date of Birth must be filled ");
+                    return false;
+                }
+          if (d == "") {
+              alert("password must be filled ");
+              return false;
+          }
+          if(f!=d){
+              alert("password does not match ");
+              return false;
+
+          }
+         
+          }
+</script>
+    </body>
+</html>

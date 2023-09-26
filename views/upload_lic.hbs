@@ -1,0 +1,258 @@
+
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="http://www.expertphp.in/js/jquery.form.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+  <style>
+      body{margin-top:20px;}
+.with-nav-tabs.panel-primary .nav-tabs > li > a,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #fff;
+}
+.with-nav-tabs.panel-primary .nav-tabs > .open > a,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #807000;
+	background-color: #fff;
+	border-color: transparent;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+	color: #428bca;
+	background-color: #fff;
+	border-color: #428bca;
+	border-bottom-color: transparent;
+}
+
+[class^="btn-"] {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  height: 80px;
+  max-width: 250px;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: 1px solid currentColor;
+}
+
+a {
+  text-decoration: none;
+  line-height: 80px;
+  color: black;
+}
+.files input {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    padding: 120px 0px 85px 35%;
+    text-align: center !important;
+    margin: 0;
+    width: 100% !important;
+}
+.files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+ }
+.files{ position:relative}
+.files:after {  pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.color input{ background-color:#f1f1f1;}
+.files:before {
+    position: absolute;
+    bottom: 10px;
+    left: 0;  pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    content: " or drag it here. ";
+    display: block;
+    margin: 0 auto;
+    color: #2ea591;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+.btn-labeled {padding-top: 0;padding-bottom: 0;}
+.btn { margin-bottom:10px; }
+
+#formdiv {
+  text-align: center;
+}
+#file {
+  color: green;
+  padding: 5px;
+  border: 1px dashed #123456;
+  background-color: #f9ffe5;
+}
+#img {
+  width: 17px;
+  border: none;
+  height: 17px;
+  margin-left: -20px;
+  margin-bottom: 191px;
+}
+.upload {
+  width: 100%;
+  height: 30px;
+}
+.previewBox {
+  text-align: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  float: left;
+}
+.previewBox img {
+  height: 150px;
+  width: 150px;
+  padding: 5px;
+  border: 1px solid rgb(232, 222, 189);
+}
+.delete {
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  width: 20px;
+  height:  20px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+
+.btn-6 {
+  color: #925fcd;
+}
+.btn-6 span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: #4c2876;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width 0.4s, height 0.4s;
+  transition: width 0.4s, height 0.4s;
+  z-index: -1;
+}
+
+.btn-9 {
+  color: #55a7cf;
+}
+.btn-9:before, .btn-9:after,
+.btn-9 span:before,
+.btn-9 span:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 0;
+  background: rgba(33, 91, 119, 0.25);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.btn-9:after,
+.btn-9 span:before {
+  top: auto;
+  bottom: 0;
+}
+.btn-9 span:before,
+.btn-9 span:after {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+.btn-9:hover {
+  color: #cde5f1;
+}
+.btn-9:hover:before, .btn-9:hover:after,
+.btn-9:hover span:before,
+.btn-9:hover span:after {
+  height: 80px;
+}
+.btn-9:active {
+  background: #3798c6;
+}
+
+  </style>
+</head>
+<body>
+       
+
+ <div class="container">
+    <div class="col-md-12">
+      <div class="panel with-nav-tabs panel-primary">
+            <div class="tab-pane fade" id="Tabs-Ketiga">
+              <div class="col-md-12">
+                <!-- untuk backend actionnya ditunjukan ke mana -->
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                  <div class="form-group files">
+                    <label>Upload Your Licence </label>
+                    <input type="file" name="pic" accept="image/*">
+                  </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="tab-pane fade in active" id="Tabs-Keempat">
+              <!-- disini maksudnya in active yaitu mengaktifkan file yg ditampilkan untuk pertamakali -->
+              <div class="col-md-12">
+                  <form action="/upload_lic" name="myForm" onsubmit="return validateForm()" method="post" enctype="multipart/form-data">
+                  <div class="form-group files color">
+                    <label>Upload Your Licence </label>
+                      <input type="file" name="pic" accept="image/*"><br>
+                  </div>
+                   <div class="col-md-12">
+                    <button type="submit" class="btn btn-labeled btn-success pull-right">
+                      <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Save
+                    </button>
+                  </div>
+                </form>
+                 <script>
+                function validateForm() {
+                let a = document.forms["myForm"]["pic"].value;
+                 if (a.files.length == 0) {
+                    alert("file must be filled ");
+                    return false;
+                }
+                }
+          </script>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+</body>
+</html>
+

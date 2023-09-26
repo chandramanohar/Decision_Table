@@ -1,0 +1,87 @@
+<html>
+<head>
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<!---Include the above in your HEAD tag --->
+		
+		
+		<!--Pulling Awesome Font -->
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+     <style>
+		 @import url(http://fonts.googleapis.com/css?family=Roboto:400);
+	body {
+  background-color:whitesmoke;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+
+.container {
+    padding: 100px;
+    position: fixed;
+}
+
+.form-login {
+    background-color: #EDEDED;
+	
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+
+h4 { 
+ border:0 solid #fff; 
+ border-bottom-width:1px;
+ padding-bottom:10px;
+ text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+		}
+
+.wrapper {
+    text-align: center;
+}
+ input[type=submit]
+ {
+	 width: 185px;
+ }
+	   </style>
+</head>
+<body>
+		<form action="/submit/details" method="post">
+			<div class="container">
+					<div class="row">
+						<div class="col-md-offset-5 col-md-3">
+							<div class="form-login">
+							<h1 >Enter Your Details</h1>
+							{{!-- <input type="text" id="time" name="time"> --}}
+							<input type="text" id="car_model" name="car_model" class="form-control input-sm chat-input" placeholder="Enter car model" />
+							</br>
+							  <input type="text" id="pickUp_date" name="pickUp_date" class="form-control input-sm chat-input" placeholder="Enter Pick Up Date" />
+							</br>
+							<input type="text" id="pickup_time" name="pickup_time" class="form-control input-sm chat-input" placeholder="Enter Pink Up time" />
+							</br>
+	                      
+                           	<input type="text" id="drop_date" name="drop_date" class="form-control input-sm chat-input" placeholder="Enter Drop Date" />
+							</br>
+                            <input type="text" id="drop_time" name="drop_time" class="form-control input-sm chat-input" placeholder="Enter Drop time" />
+							</br>
+							<div class="wrapper">
+							<span class="group-btn">     
+								<input type="submit" class="btn btn-primary btn-md" value="submit">
+							</span>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+        </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+      <%- include("Admin_navbar.ejs")  %>
+       
+
+       <% temp.forEach(function(i){ %>
+              <div>
+                     
+                    <p> <%= i.id+" "+i.name+"   "+i.email +"  "+i.mobileno+"  "+i.location %></p>
+                            
+                           
+                     
+              </div>
+      <% }); %>
+</body>
+</html>

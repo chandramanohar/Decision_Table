@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+         h1{
+		   display: block;
+		color:white;
+    margin-top: 5%;
+		margin-left: 80%;
+		padding: 14px 16px;
+		text-decoration: none
+		 }
+		 h2{
+		  margin-left: 83%;
+      margin-top: 10%;
+      font-size: 35px;
+		 }
+     body {
+       background-image: url('car2.jpeg');
+       background-size:2000px;
+       background-repeat: no-repeat;
+     }
+     button{
+       font-size: 25px;
+     }
+   </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{!-- <link rel="stylesheet" href="/stylesheerts/style.css"> --}}
+  <title>Welcom</title>
+</head>
+<body>
+  <h1>Welcome</h1>
+  <h2>
+  <form action ="/submit/login" method="POST">
+        <button class="btn btn-lg btn-success btn-block" type="submit">login</button>
+  </form><br>
+  <form action="/submit/signUp" method ="POST">
+    <button type="submit">Sign Up</button>
+  </form>
+   </h2>
+</body>
+</html>

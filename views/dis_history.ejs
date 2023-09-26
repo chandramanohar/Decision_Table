@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body>
+       <%- include ("nav.ejs") %>
+       
+
+       <% temp.forEach(function(i){ %>
+              <div>
+                     <form>
+                        <p> <%= i.user_id +"  "+i.car_model+"  "+i.reg_no+"  "+i.start_date+"  "+i.end_date+"   "+i.start_time+"  "+i.end_time+"   "+i.return_date+"   "+i.return_time %></p>
+                            
+                     </form>
+              </div>
+      <% }); %>
+</body>
+</html>

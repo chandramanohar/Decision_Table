@@ -1,0 +1,22 @@
+<html>
+<head></head>
+<body>
+       <% include ("nav.ejs") %>
+       
+
+       <% temp.forEach(function(i){ %>
+              <div>
+                     <form action="/returned" method="post">
+                            <p> <%= i.user_id +"  "+i.car_model+"  "+i.reg_no %></p>
+                            <input type="hidden" name="car_model" value=<%= i.car_model %>>
+                            <input type="hidden" name="reg_no" value=<%= i.reg_no %> >
+                            <input type="hidden" name="car_price" value=<%= i.car_price %>>
+                            <input type="hidden" name="car_img" value=<%= i.car_img %>>
+                            Enter returned_date:<input type="text" name="returned_date"><br>
+                            Enter returned_time:<input type="text" name="returned_time"><br>
+                            <input type='submit' value='returned'>
+                     </form>
+              </div>
+      <% }); %>
+</body>
+</html>

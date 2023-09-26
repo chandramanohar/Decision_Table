@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+        <%- include("Admin_navbar.ejs")  %>
+       
+
+       <% temp.forEach(function(i){ %>
+              <div>
+                     <form action='/Active_Display' method='post'>
+                            <p> <%= i.user_id+" "+i.co_id+"   "+i.car_model +"  "+i.reg_no %></p>
+                            
+                            <input type="hidden" name="user_id" value=<%= i.user_id %>>
+                            <input type="hidden" name="owner_id" value=<%= i.co_id %>>
+                            <input type='submit' value='Owner Details' name="submit">
+                            <input type='submit' value='User Details' name="submit">
+                     </form>
+              </div>
+      <% }); %>
+</body>
+</html>

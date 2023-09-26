@@ -1,0 +1,19 @@
+<html>
+<head></head>
+<body>
+       <%- include("Admin_navbar.ejs")  %>
+       
+
+       <% temp.forEach(function(i){ %>
+              <div>
+                     <form action="/Admin_history_details" method="post">
+                        <p> <%= i.owner_id+"  "+i.user_id +"  "+i.car_model+"  "+i.reg_no+"  "+i.start_date+"  "+i.end_date+"   "+i.start_time+"  "+i.end_time %></p>
+                        <input type="hidden" name="user_id" value=<%= i.user_id %>>
+                        <input type="hidden" name="owner_id" value=<%= i.owner_id %>>
+                        <input type='submit' value='Owner Details' name="submit">
+                        <input type='submit' value='User Details' name="submit">
+                     </form>
+              </div>
+      <% }); %>
+</body>
+</html>
